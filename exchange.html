@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>환율 시스템</title>
+  <link rel="stylesheet" href="change.css">
+  <!-- 환율정보 들고오기 끝-->
+  <!-- 드랍다운 리스트에서 아이템선택하면 아이템이바뀜-->
+  <!-- 금액을 입력시 환전-->
+  <!-- 드랍다운 리스트에서 아이템을 선택하면 그 단위기준으로 환전이됌-->
+  <!-- 숫자를 한국어로-->
+  <!-- 반대로 밑에서 박스를 숫자로 바꿔도 위에 박스 환율 적용됌-->
+
+</head>
+<body>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+<div class="dropdown-Box"> <!--부모 크기 100% 받기 사이즈 맞출려면-->
+  <div class="dropdown">
+    <button class="dropbtn" id="currencyDate">USD</button>
+    <div class="dropdown-content" id="currencyContent">
+      <a href="#" >USD</a>
+      <a href="#" >KRW</a>
+      <a href="#" >VND</a>
+    </div>
+  </div>
+  <div class="input-area" >
+    <input type="number" id="inputNum" onkeyup="convert('from')">
+    <div id="fromNumToKorea">달러</div>
+  </div>
+</div>
+<h3 class="recite">=</h3>
+
+<div class="dropdown-Box"> <!--부모 크기 100% 받기 사이즈 맞출려면-->
+  <div class="dropdown">
+    <button class="dropbtn" id="to-currencyDate2">USD</button>
+    <div class="dropdown-content" id="to-currencyContent2">
+      <a href="#" >USD</a>
+      <a href="#" >KRW</a>
+      <a href="#" >VND</a>
+    </div>
+  </div>
+  <div class="input-area" >
+    <input type="number" id="inputNum2" onkeyup="convert('to')">
+    <div id="toNumToKorea">달러</div>
+  </div>
+</div>
+
+
+
+  <script src="main.js"></script>
+ 
+</body>
+</html>
